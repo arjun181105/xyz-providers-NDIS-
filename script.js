@@ -1,4 +1,4 @@
-// Minimal JS for nav toggle and year stamp
+// Nav toggle + year + intersection observer for reveals
 const btn = document.querySelector('.nav-toggle');
 const menu = document.getElementById('nav-menu');
 if (btn && menu){
@@ -8,3 +8,15 @@ if (btn && menu){
   });
 }
 document.getElementById('year').textContent = new Date().getFullYear();
+
+if ('IntersectionObserver' in window){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+} else {
+  // Fallback
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}

@@ -1,24 +1,14 @@
-# XYZ Providers — NDIS Demo Site
+# XYZ Providers — NDIS Demo Site (v2)
 
-A lightweight, accessible, single-page demo website for an NDIS provider. Built from scratch (HTML/CSS/JS), minimal animations, clean structure.
-
-## Sections
-- Hero with CTA and trust points
-- Services (cards)
-- About (mission + badges)
-- Testimonials
-- FAQs
-- Contact form + details
-- Footer
+- Adds **high-quality stock photos** via Unsplash Source URLs (care/disability/community).
+- Adds **subtle scroll-in animations** (reveal on view, respects `prefers-reduced-motion`).
+- Built mobile-first, accessible, and ready for GitHub Pages.
 
 ## Quick deploy (GitHub Pages)
-1. Create a new GitHub repo, e.g. `xyz-providers-demo`.
-2. Upload all files in this folder (keep the `assets` directory).
-3. In repo **Settings → Pages**, set **Source** to `main` and `/root` (or `docs` if you prefer).
-4. Wait 1–2 minutes, then visit the Pages URL it gives you.
+1. New repo (e.g., `xyz-providers-v2`).
+2. Upload these files.
+3. Settings → Pages → Source: `main` / `/root`.
+4. Replace `[Suburb]`, phone, email, and provider number in `index.html`.
 
-## Customise
-- Replace `[Suburb]`, phone, email, address in `index.html`.
-- Swap images in `/assets` with your own (keep filenames or update the HTML).
-- Update colours/branding in `styles.css`.
-- Contact form is static; connect to Netlify Forms, Formspree, or your backend to receive submissions.
+## Notes
+- Photos load from Unsplash on the fly (no need to host images). Replace the URLs with your own later if needed.
